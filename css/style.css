@@ -1,0 +1,416 @@
+﻿body{
+     margin: 0;
+     padding: 0;
+     background-color: #e3e3e3;
+}
+
+.container{
+     margin: auto;
+     max-width: 1020px;
+     width: 75%;
+     padding: 35px;
+     position: relative;
+}
+
+.clearfix{
+     content: "";
+     display: table;
+     clear: both;
+}
+
+/*
+================================ H E A D E R ===================================
+*/
+
+header{
+     background-size: cover;
+     position: relative;
+     background-image: url("../img/header.jpg");
+     background-position: 0 -150px;
+     background-attachment: fixed;
+     box-shadow: inset 0 -250px 300px rgba(0,0,0,0.7);
+     z-index: 20;
+}
+
+header .container{
+     height: 100%;
+     padding-bottom: 0;
+}
+
+H1{
+     margin-top: 110px;
+     color: white;
+     font-family: 'Times New Roman', serif;
+     font-weight: bold;
+     line-height: 60px;
+     margin-bottom: 0;
+}
+
+H1 span:first-child {
+     text-transform: uppercase;
+     font-size: 68px;
+}
+
+H1 span:last-child {
+     font-size: 82px;
+}
+
+/*
+============================ N A V I G A T I O N ==============================
+*/
+
+nav{
+     background-size: cover;
+     position: sticky;
+     top: 0;
+     background-image: url("../img/header.jpg");
+     background-position: 0 -150px;
+     background-attachment: fixed;
+     box-shadow: inset 0 -285px 300px rgba(0,0,0,0.7), 0 0 30px black;
+     z-index: 15;
+}
+
+nav .container{
+     padding: 15px 35px;
+}
+
+nav a{
+     display: inline-block;
+     height: 30px;
+     border: 1px solid white;
+     padding: 10px 20px;
+     color: white;
+     text-decoration: none;
+     font-size: 25px;
+     border-radius: 40px;
+     margin-right: 15px;
+
+     transition-property: all;
+     transition: all ease 0.5s;
+}
+
+nav a:last-child{
+     margin-right: 0;
+}
+
+nav a:hover{
+     transform: scale(1.2);
+     box-shadow: 0 0 20px white;
+}
+
+nav a:active{
+     transform: scale(1.001);
+}
+
+/*
+============================ I N F O R M A T I O N =============================
+*/
+
+.first{
+     overflow: hidden;
+}
+
+.first .container{
+     background-color: white;
+}
+
+.first p {
+     /*font-family: 'Roboto light', sans-serif;*/
+     font-family: 'Times New Roman', serif;
+     font-size: 28px;
+     color: #393939;
+     line-height: 35px;
+     margin: 0 0;
+     margin-bottom: 20px;
+     position: relative;
+}
+
+.first img{
+     height: 500px;
+     clear: both;
+     display: inline-block;
+     margin: 10px 0;
+     background-color: white;
+     position: relative;
+     animation-duration: 1.5s;
+     animation-timing-function: ease;
+
+     transition-property: all;
+     transition: all ease 1s;
+}
+
+.first .right-img{
+     float: right;
+     left: 35px;
+     z-index: 4;
+
+     animation-name: slideOutRight;
+
+}
+
+.first .left-img{
+     float: left;
+     right: 35px;
+     z-index: 4;
+
+     animation-name: slideOutLeft;
+}
+
+@keyframes slideOutRight {
+     from{opacity: 0; position: relative; left: 100%;}
+     to{opacity: 1;}
+}
+
+@keyframes slideOutLeft {
+     from{opacity: 0; position: relative; right: 100%;}
+     to{opacity: 1;}
+}
+
+.first q{
+     font-size: 28px;
+     margin: 15px 0;
+     padding: 20px 30px;
+     font-style: italic;
+     color: #4b4b4b;
+     display: block;
+}
+
+.first .left-quote{
+     border-left: 5px solid #e3e3e3;
+     background: linear-gradient(to right, #f7f7f7, white);
+}
+
+.first .right-quote{
+     border-right: 5px solid #e3e3e3;
+     background: linear-gradient(to left, #f7f7f7, white);
+}
+
+.first .image{
+     background-image: url("../img/footer.jpg");
+     background-position: bottom;
+     background-size: cover;
+     background-attachment: fixed;
+     margin: 35px 0;
+     height: 600px;
+     width: 100%;
+     position: relative;
+     right: 35px;
+     display: block;
+     clear: both;
+     padding: 0 35px;
+
+     transition-property: all;
+     transition: all ease 1s;
+}
+
+.first .image:hover,
+.first .left-img:hover,
+.first .right-img:hover{
+     transform: scale(1.1);
+     box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+.first .image::before{
+     content: "Франц Крюгер. \"Русская гвардия в Царском Селе в 1832 году\", 1841 г.";
+     color: white;
+     font-size: 25px;
+     position: absolute;
+     right: 0;
+     top: 0;
+     padding: 20px;
+     text-shadow: 0 0 15px black;
+}
+
+.expert{
+    border: 5px dashed rgba(1,1,1,0.4); 
+    padding: 30px;
+}
+
+.expert h2{
+    font-size: 35px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.expert hr{
+    margin: 20px;
+}
+
+
+/*
+=============================== S I G N - U P ==================================
+*/
+
+.sign-up{
+     background-color: rgba(0,0,0,0.9);
+     box-shadow: 0 0 10px rgba(0,0,0,1);
+     position: fixed;
+     top: 0;
+     width: 100%;
+     height: 100vh;
+     z-index: 101;
+}
+
+.sign-up .container{
+     height: 100%;
+}
+
+.sign-up .window{
+     background-color: white;
+     box-shadow: 0 0 50px black;
+     border-radius: 10px;
+     border-top-right-radius: 15px;
+     border-bottom-right-radius: 15px;
+     position: relative;
+     top: 10%
+}
+
+.sign-up h2{
+     color: rgba(0,0,0,0.9);
+     background-image: none;
+     font-size: 26px;
+     letter-spacing: 1px;
+     font-weight: 700;
+     line-height: 30px;
+     font-family: 'Montserrat', sans-serif;
+     margin-bottom: 100px;
+}
+
+.sign-up .picture{
+     position: relative;
+     width: 50%;
+     height: 465px;
+     float: right;
+     background-image: url("../img/form.jpg");
+     background-size: cover;
+     background-position: top;
+     border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px;
+}
+
+.sign-up .cancel{
+     height: 30px;
+     width: 30px;
+     cursor: pointer;
+     position: absolute;
+     right: 20px;
+     top: 20px;
+}
+
+.sign-up .form{
+     text-align: left;
+     width: 30%;
+     float: left;
+     padding: 80px;
+     padding-right: 30px;
+     position: relative;
+}
+
+.sign-up input{
+     display: block;
+     height: 35px;
+     border: none;
+     width: 100%;
+     border-bottom: 1px solid rgba(0,0,0,0.7);
+     font-family: "Open Sans",sans-serif;
+     font-size: 14px;
+}
+
+.sign-up input:focus{
+     outline: none;
+}
+
+.sign-up button{
+     color: rgba(0,0,0,0.4);
+     outline: none;
+     font-size: 20px;
+     line-height: 30px;
+     position: absolute;
+     right: 30px;
+     margin-top: -35px;
+     background: none;
+     border: none;
+     transition: margin .2s;
+     transition: all ease-out 0.2s;
+}
+
+.sign-up button:hover{
+     color: black;
+     cursor: pointer;
+     margin-right: -5px;:
+}
+
+.sign-up .thanks{
+    position: absolute; 
+    top: 60px; 
+    background-color: white;
+    display: none;
+    transition: 1s;
+    padding-right: 60px;
+}
+
+
+/*
+================================ F O O T E R ===================================
+*/
+
+footer{
+     padding-top: 35px;
+     height: 600px;
+     background-image: url("../img/footer2.jpg");
+     background-size: cover;
+     position: relative;
+     background-position: top;
+     background-attachment: fixed;
+     box-shadow: inset 0 250px 300px rgba(0,0,0,0.7), 0 0 30px black;
+     z-index: 5;
+}
+
+footer p{
+     color: white;
+     border: 1px solid white;
+     display: inline-block;
+     padding: 10px 20px;
+     border-radius: 30px;
+     font-size: 25px;
+     margin: 0;
+
+     animation-name: light;
+     animation-duration: 3s;
+     animation-timing-function: ease;
+     animation-iteration-count: infinite;
+}
+
+@keyframes light {
+     from{box-shadow: 0 0 0;}
+     50%{box-shadow: 0 0 20px white;}
+     to{box-shadow: 0 0 0;}
+}
+
+.up-arrow{
+     height: 55px;
+     width: 55px;
+     float: right;
+     background-image: url("../img/up-arrow.png");
+     background-size: cover;
+     border-radius: 30px;
+     margin-left: 15px;
+
+     transition-property: all;
+     transition: all ease 0.5s;
+}
+
+.up-arrow:hover{
+     transform: translateY(-20%);
+}
+
+.up-arrow:active{
+     transform: scale(1.001);
+}
+
+.anchor{
+     position: relative;
+     top: -100px;
+     height: 1px;
+     width: 1px;
+}
